@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Login to GPA-WEB</title>
+	<link rel="stylesheet" type="text/css" href="css/student-styles.css">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="sub-container">
+      <form class="inputs" action="studentAction.php" autocomplete="off" method="POST">
+        <div class="heading">Login As Student </div>
+        <br>
+        <input class="text-input" type="text" name="enrollment" autocomplete="on" placeholder="Enrollment Number">
+        <br>
+        <input class="text-input" type="password" name="password" placeholder="Password">
+        <br>
+        <input class="login-btn" type="submit" name="submit" value="Login">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

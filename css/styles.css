@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  background-color: rgb(220, 223, 227);
+}
+.container {
+  text-align: center;
+  padding: 20px;
+}
+.sub-container{
+  width: 400px;
+  box-shadow: 0 0 5px 6px rgba(200, 203, 207, 1);
+  margin: 40px auto; padding: 20px;
+  background-color: white;
+}
+.heading {
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 40px;
+}
+.note{
+  background-color: rgba(111, 164, 237, 0.5);
+  padding: 10px 5px;
+  color: rgb(30, 115, 232);
+  font-weight: bolder;
+  text-align: left;
+  font-family: serif;
+  border-left: 3px solid blue;
+}
+.red {
+  color: rgb(30, 115, 232);
+}
+a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 auto 30px;
+  width: 49%;
+  padding: 10px 7px;
+  font-size: 20px;
+}
+a:hover {
+  cursor: pointer;
+}
+.login-teacher {
+  color: white;
+  background-color: rgb(152, 64, 219);
+}
+.login-student {
+  color: white;
+  background-color: rgb(110, 224, 61);
+}

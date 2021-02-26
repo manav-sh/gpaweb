@@ -1,0 +1,39 @@
+.heading {
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  overflow: auto;
+}
+.heading-img {
+  float: left;
+}
+.head-navigation {
+  float: right;
+  position: absolute;
+  right: 20px;
+  top: 35%;
+}
+.head-links {
+  text-decoration: none;
+  margin: 0 0 0 20px;
+  padding: 8px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  transition-duration: 0.3s;
+}
+.head-links:hover {
+  color: white;
+  background-color: black;
+}
+.profile {
+  font-size: 18px;
+}
+h2 {
+  display: inline;
+  font-size: 23px;
+  vertical-align: middle;
+  float: right;
+  font-family: 'Oxygen', sans-serif;
+  margin: 7px 15px ;
+  font-weight: normal;
+}

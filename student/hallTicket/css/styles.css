@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  background-color: rgb(220, 223, 227);
+}
+.container {
+  text-align: center;
+  padding: 20px;
+}
+.sub-container{
+  width: 460px;
+  box-shadow: 0 0 5px 6px rgba(200, 203, 207, 1);
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+}
+@media screen and (max-width: 600px) {
+  .sub-container {
+    width : 90%;
+    margin: 60px auto;
+  }
+  .note {
+    font-size: 110%;
+  }
+  .ticket-info {
+    font-size: 17px;
+  }
+  .container {
+    padding: 5px;
+    padding-right: 5px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sub-container {
+    width: 85%;
+    margin: 160px auto;
+  }
+  .note {
+    font-size: 130%;
+  }
+  .ticket-info {
+    font-size: 20px;
+  }
+  a {
+    font-size: 25px;
+  }
+}
+.heading {
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 40px;
+}
+.note{
+  background-color: rgba(111, 164, 237, 0.5);
+  padding: 10px 5px;
+  color: rgb(30, 115, 232);
+  font-weight: bolder;
+  text-align: left;
+  font-family: serif;
+  border-left: 3px solid blue;
+}
+.red {
+  color: rgb(30, 115, 232);
+}
+a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  margin: 15px auto 30px;
+  width: 49%;
+  padding: 12px 10px;
+  font-size: 20px;
+
+}
+a:hover {
+  cursor: pointer;
+}
+.download-ticket {
+  color: white;
+  background-color: rgb(152, 64, 219);
+}
+.ticket-info {
+
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  margin: 0 0 10px 8px;
+  font-size: 15px;
+}
+.ticket-info-nf {
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  margin: 0 0 10px 8px;
+  font-size: 15px;
+  display:none;
+}
+
+ul {
+  margin-top: 0;
+}
+li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin-top: 0;
+  text-align: left;
+  display: none;
+}

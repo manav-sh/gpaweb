@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  background-color: rgb(220, 223, 227);
+}
+.container {
+  text-align: center;
+  padding: 20px;
+}
+.sub-container{
+  width: 400px;
+  box-shadow: 0 0 5px 6px rgba(200, 203, 207, 1);
+  margin: 40px auto; padding: 20px;
+  background-color: white;
+}
+.heading {
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 40px;
+}
+.note{
+  
+  padding: 10px 5px;
+  color: rgb(30, 115, 232);
+  font-weight: bolder;
+  text-align: left;
+  font-family: serif;
+  border-left: 3px solid rgba(111, 164, 237, 0.5);
+}
+
+.text-input {
+  width: 70%;
+  margin-bottom: 30px;
+  padding: 10px 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid darkgray;
+  
+}
+.text-input:focus {
+  outline: none;
+  border-bottom-color: rgb(9, 186, 27);
+  font-size: 16px;
+  color: rgb(9, 186, 27);
+  duration: 1s;
+}
+.login-btn {
+  margin-top: 15px;
+  padding: 10px 0;
+  width: 60%;
+  border-radius: 20px;
+  border: none;
+  background-color: green;
+  color: white;
+  font-size: 19px;
+}
+
+.inputfile {
+  width: 1px;
+	height: 1px;
+	opacity: 0;
+	overflow: hidden;
+  z-index: -1;
+	position: absolute;
+}
+.file-label {
+  text-align: left;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  background: rgb(227, 64, 52); 
+  width: 65%; 
+  color: white;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  
+}
