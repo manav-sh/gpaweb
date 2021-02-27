@@ -31,9 +31,12 @@
 
 			$mail_id = $row[0];
 
-			$headers = "From: GPA-WEB"."<m.shah060603@gmail.com>";
-			$subject = "<no-reply> OTP For Login";
+			$headers = "From: no-reply"."<m.shah060603@gmail.com>\r\n";
+			$subject = "GPA-WEB OTP For Login";
 			$message = "Dear Student, <br> The OTP for your login verification is $num . <br>Please keep it safe and don't share with others for security reasons.";
+			
+			$headers .= "MIME-Version: 1.0\r\n";
+			$headers .= "Content-type: text/html\r\n";
 
 			mail($mail_id, $subject, $message, $headers);
 		}
@@ -44,30 +47,4 @@
 		echo "<script>alert('The Account Details you entered doesnot match. Please try again')";
 		header("Location:index.html");
 	}
-
-	if (isset($_POST['submit'])) {
-		if ($_POST['otp'] == $num) {
-			setcookie('enroll' , $enrollment, time() + (86400*30) );
-			setcookie('password' , $password, time() + (86400*30) );
-			header("location: student/index.html");
-		}
-		else {
-			echo "<script>alert('The OTP you entered doesn't match. Please try again')";
-		}
-	}
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Verify Account</title>
-</head>
-<body>
-<form>
-	<h3>Verify Account</h3>
-	<p>Enter the OTP send to your registered email id.</p>
-	<input type="number" name="otp" value="Enter OTP">
-	<input type="submit" name="submit" value="Verify">
-
-</form>
-</body>
-</html>
