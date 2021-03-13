@@ -10,4 +10,9 @@ also each folder has a subfolder called styles, that contains one file called "s
 that applies in the same manner as above.
 for eg, hallTicket --> css --> styles.css file is for hallTicket html file.
 
+UPDATES:
+- OTP Verification added.
+- Login and logout with session management added
+- Dynamic profile page made
+
 If you want any changes, do PR with proper comments which shows the changes you have done.
