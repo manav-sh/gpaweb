@@ -14,5 +14,9 @@ UPDATES:
 - OTP Verification added.
 - Login and logout with session management added
 - Dynamic profile page made
+- Dashboard Updated with simplistic and clean UI.
+- responsiveness increased.
 
+Rule:
 If you want any changes, do PR with proper comments which shows the changes you have done.
+Don't PR files directly, create a directly and store all the files there and then PR. Otherwise it will not be accepted.
