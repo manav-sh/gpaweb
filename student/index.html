@@ -1,55 +1,122 @@
 <html>
 <head>
-  <title>Student Dashboard</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <meta name="viewport" content="width=max-width , initial-scale:1">
+  <title>Student Dashboard - Trial</title>
+
   <meta name="viewport" content="width=max-width , initial-scale=1.0">
+  <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Script actions for logout and events. -->
+
+  <script type="text/javascript">
+    function logoutModule() {
+      if (confirm("Warning: You will be logged out of the GPA-Web") == true) 
+      {
+        window.location.href = "logout.php";
+      }
+    }
+    function manageEvent() {
+      alert("Module Under Development. Please wait for some time to be it live.");
+    }
+  </script>
+
+  <!-- Styles to override -->
+  <style type="text/css">
+    .navbar-flow {
+      float: right;
+    }
+  </style>
+
 </head>
 <body>
-  <div class="container">
-    <div class="heading">
-      <span class="heading-img">
-        <img src="https://images.shiksha.com/mediadata/images/1588064208phplgAE6e.jpeg" width="40px">
-        <h2>Student Dashboard</h2>
-      </span>
-      <div class="head-navigation">
-        <a class="head-links" href="#">About Us</a>
-        <a class="head-links" href="#">Logout</a>
-        <a class="head-links" href="seatNumber">Seat Number</a>
-        <a class="head-links profile" href="profile/"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="https://images.shiksha.com/mediadata/images/1588064208phplgAE6e.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Student Dashboard
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse navbar-flow" id="navbarNav" style="float: right;">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="seatNumber/">Seat Number <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#" onclick="manageEvent()">About Us</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" onclick="logoutModule()">Log Out</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="profile/">
+              Profile
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="card-container">
-      <div class="cards">
-        <h3> Events </h3>
-        <img class="card-img" src="https://us.123rf.com/450wm/thevisualsyouneed/thevisualsyouneed1904/thevisualsyouneed190400004/119890290-young-attractive-and-confident-successful-man-with-headset-speaking-at-corporate-business-coaching-a.jpg?ver=6" width="170px" height="130px">
-        <p class="card-content"> Keep yourself up-to-date by knowing all the events happening in instutute.
-        </p>
-        <a class="card-action" href="#">View Events</a>
+    </nav>
+
+  <div class="container" style="text-align: center;">
+
+    <div class="row card-container" style="padding: 9% 0; text-align: center;">
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card card-pd">
+          <br>
+          <img class="card-img-top card-img-pd" src="loudspeaker.svg" alt="Events" height="80px" width="80px">
+          <div class="card-body">
+            <h5 class="card-title">Events</h5>
+            <p class="card-text">Keep yourself up-to-date by knowing all the ongoing / upcoming events.</p>
+            <a href="#" class="btn btn-success btn-bounce" onclick="manageEvent()">View Events</a>
+          </div>
+        </div>
       </div>
 
-      <div class="cards">
-        <h3> Hall Tickets </h3>
-        <img class="card-img" src="https://i.ytimg.com/vi/8NTDscv1poM/maxresdefault.jpg" width="170px" height="130px">
-        <p class="card-content">Get your Exam hall ticket here. So you dont need to move outside and focus studies.
-        </p>
-        <a class="card-action" href="hallTicket/">Download Hall Ticket </a>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card card-pd">
+          <br>
+          <img class="card-img-top card-img-pd" src="ticket.svg" alt="Hall ticket" height="80px" width="80px">
+          <div class="card-body">
+            <h5 class="card-title">Hall Ticket</h5>
+            <p class="card-text">Get your Exam hall ticket. So you can focus more on studies.</p>
+            <a href="hallticket/" class="btn btn-success btn-bounce">Download Hall Ticket</a>
+          </div>
+        </div>
       </div>
 
-      <div class="cards">
-        <h3> Hostel Fees Payment </h3>
-        <img class="card-img" src="http://www.letsbegamechangers.com/wp-content/uploads/2019/02/mPAY24_sliderimg_cloud_LogoNEU_CH_V3.png" width="170px" height="130px">
-        <p class="card-content"> Pay hostel fees securely through payment gateway and with ease.
-        </p>
-        <a class="card-action" href="feesPayment/">Pay Now </a>
+      <div class="col-lg-4 col-sm-12 col-md-6">
+        <div class="card card-pd">
+          <br>
+          <img class="card-img-top card-img-pd" src="credit-card.svg" alt="Hall ticket" height="80px" width="80pc">
+          <div class="card-body">
+            <h5 class="card-title">Hostel Fees Payment</h5>
+            <p class="card-text">
+              Pay your hostel fees securely through a trusted payment gateway and hassle free.
+            </p>
+            <a href="feesPayment/" class="btn btn-success btn-bounce">Pay Fees</a>
+          </div>
+        </div>
       </div>
+    
     </div>
   </div>
 </body>
