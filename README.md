@@ -19,4 +19,4 @@ UPDATES:
 
 Rule:
 If you want any changes, do PR with proper comments which shows the changes you have done.
-Don't PR files directly, create a directly and store all the files there and then PR. Otherwise it will not be accepted.
+Don't make a PR with files directly, create a directory and store all the files there and then PR. Otherwise it will not be accepted.
