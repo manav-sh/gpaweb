@@ -1,3 +1,4 @@
+<?php include 'filesLogic.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,16 +18,16 @@
         <h2 class="heading">Welcome Respected Sir/Ma'am</h2>
       </center>
       <p class="note">Upload the PDF of Hall ticket that is been recieved by you in the below form along with the Semester and section </p><br>
-      <form class="inputs" autocomplete="off">
+      <form class="inputs" autocomplete="off" action = "index.php" method = "post" enctype="multipart/form-data">
         <input class="text-input" type="text" name="username" placeholder="Semester">
         <br>
         <input class="text-input" type="password" name="password" placeholder="Section">
         <br>
         <div class="file-input">
-        <input class="inputfile" name="file" type="file" id="file"> <label class="file-label" for="file"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Choose File (.pdf file) </label>
+        <input class="inputfile" name="myfile" type="file" id="file"> <label class="file-label" for="file"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Choose File (.pdf file) </label>
         </div>
         <br>
-        <input class="login-btn" type="submit" name="submit" value="Upload Hall Ticket">
+        <input class="login-btn" type="submit" name="save" value="Upload Hall Ticket">
         
         
       </form>
