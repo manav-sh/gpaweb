@@ -1,3 +1,4 @@
+<?php include 'filesLogic.php';?>
 <html>
 <head>
   <title>Hall Ticket Download</title>
@@ -18,9 +19,30 @@
         <p class="ticket-info"> Here's the Hall ticket for your exam. Click the button below to download it. The <b>PDF of hall ticket</b> will be sent to you on your <b>registered email id</b>.
           <br><br>Best of Luck for your Exams!!
         </p>
-      <a href="#" class="download-ticket">
-        Download Hall Ticket
-      </a>
+        <h2>Department Announcements</h2>
+        <table>
+        <thead>
+            <th>ID</th>
+            <th>Filename</th>
+            <th>size (in mb)</th>
+            <th>Downloads</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+          <?php foreach ($files as $file): ?>
+            <tr>
+              <td><?php echo $file['id']; ?></td>
+              <td><?php echo $file['name']; ?></td>
+              <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
+              <td><?php echo $file['downloads']; ?></td>
+              <td><a href="downloads.php?file_id=<?php echo $file['id'] ?>">Download</a></td>
+            </tr>
+          <?php endforeach;?>
+        
+        </tbody>
+        </table>
+          </div>
+          </div>
       </div>
       <div class="ticket-not-found">
         <p class="ticket-info-nf">
